@@ -11,8 +11,10 @@ RemoveSeasonal(y, t_mmdd)
 }
 \value{
 一个 list：
+\itemize{
 \item{mu}{按月日升序排列的季节均值}
 \item{anomaly}{去季节序列（距平）}
+}
 }
 \description{
 按月日分组求气候态均值，再从原序列中扣除，得到距平序列。

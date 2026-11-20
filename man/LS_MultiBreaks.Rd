@@ -13,9 +13,11 @@ LS_MultiBreaks(Y, X, Ips, ...)
 }
 \value{
 一个 list：
+\itemize{
 \item{coef}{系数}
 \item{fitted}{拟合值}
 \item{resi}{残差}
+}
 }
 \description{
 单断点情形的推广，每一段对应一个截距项，斜率保持相同。

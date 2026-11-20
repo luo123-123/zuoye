@@ -14,10 +14,12 @@ LS_OneBreak(Y, X, Ic, ...)
 }
 \value{
 一个 list：
+\itemize{
 \item{coef}{系数}
 \item{fitted}{拟合值}
 \item{resi}{残差}
 \item{SSE}{误差平方和}
+}
 }
 \description{
 在斜率不变的前提下，允许断点前后截距不同。若 \code{Ic = NA}，
