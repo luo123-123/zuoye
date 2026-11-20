@@ -5,8 +5,8 @@ test_that("RemoveSeasonal 正确扣除季节均值并返回距平", {
 
   expect_equal(res$mu, c(2, 3))
   expect_equal(res$anomaly, c(-1, 1, -1, 1))
-  # 距平按同一月日求和应为 0
-  expect_equal(tapply(res$anomaly, t_mmdd, sum), c(0, 0))
+  # 距平按同一月日求和应为 0（tapply 返回带 dimnames 的数组，先转成向量再比较）
+  expect_equal(as.numeric(tapply(res$anomaly, t_mmdd, sum)), c(0, 0))
 })
 
 test_that("LS_OneBreak 对两段截距突变数据拟合残差为 0", {
